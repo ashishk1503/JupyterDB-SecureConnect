@@ -1,0 +1,41 @@
+The exploratory data analysis was done by using pandas and the data was referred from Kaggle and also 
+with EDA the new concept was implemented which is establishing a secure connection between MySQL and 
+Jupyter_Notebook by using the following Syntax which is as mentioned for establishing connection:
+
+import mysql.connector as sql
+
+mydb = sq.connect(
+	host = "Localhost",
+	user = "root",
+	password = "",
+	database = "",
+	use_pure = True
+)
+print(mydb)
+
+Password: The Parameter is dependent on your choice it can be any keyword that you want to specify
+however, in my case it is "SQL123"
+
+Database: The parameter is the schema which is saved in MySQL workbench in my case it is balanced_tree
+named schema which contained 4 tables which are product_details, product_hierarchy, product_prices,
+sales.
+
+Also after this syntax you will establish a connection with a message of confirmation of connection 
+which is as follows:
+
+After that usage of mycursor = mydb.cursor()
+is necessary after for execution which allows Python code to execute MySQL command in a database session.
+
+
+For execution of Queries the following syntax is helpful which is as follows:
+
+mycursor.execute( SQL_query )
+myresult = my_cursor.fetchall()
+for row in myresult:
+	print(row)
+
+SQL_query must be in quoted format and also in general for SQL the query must end with a semi-colon which is ";"
+but in this case it is not required to end the query with a semi-colon. 
+For eg: SQL_query: "select * from table_name"
+
+This is a simple way to connect MySQL server to Jupyter_notebook and use SQL queries in python.
