@@ -1,5 +1,4 @@
-The exploratory data analysis was done by using pandas and the data was referred from Kaggle and also 
-with EDA the new concept was implemented which is establishing a secure connection between MySQL and 
+The new concept was implemented which is establishing a secure connection between MySQL and 
 Jupyter_Notebook by using the following Syntax which is as mentioned for establishing connection:
 
 import mysql.connector as sql
